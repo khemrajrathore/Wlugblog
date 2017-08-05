@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "343457755192",
+    "firebase_url": "https://wlugblog.firebaseio.com",
+    "project_id": "wlugblog",
+    "storage_bucket": "wlugblog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343457755192:android:e34d0e0dc3027e5a",
+        "android_client_info": {
+          "package_name": "com.example.it.wlugblog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343457755192-m3da9rkk21p2q5jk2uqci3jch4nukjbd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.it.wlugblog",
+            "certificate_hash": "71243b35ead1a48b26203d36f99045ab5ece7dd9"
+          }
+        },
+        {
+          "client_id": "343457755192-gaiiqrngrpscr16dvgaq2l034jrlicfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSqU1cY-Q4e_NHJTc7fThRyYB2sDYRiJY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343457755192-gaiiqrngrpscr16dvgaq2l034jrlicfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

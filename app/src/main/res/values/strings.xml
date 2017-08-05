@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Wlugblog</string>
+    <string name="this_is_the_image_button">This is the image button</string>
+    <string name="post_title">Post Title.....</string>
+    <string name="post_description">Post Description.....</string>
+    <string name="submit_post">Submit Post</string>
+    <string name="post_image_will_be_here">Post image will be here</string>
+    <string name="post_title_goes_string_post_image_will_be_here">Post title goes @string/post_image_will_be_here</string>
+    <string name="post_description_will_go_string_post_image_will_be_here">Post description will go @string/post_image_will_be_here</string>
+</resources>
