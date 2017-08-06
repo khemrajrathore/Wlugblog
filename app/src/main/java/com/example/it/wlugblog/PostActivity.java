@@ -21,6 +21,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -48,10 +49,12 @@ public class PostActivity extends AppCompatActivity {
 
         mStorage = FirebaseStorage.getInstance().getReference();
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Blog");
-        mSelectButton = findViewById(R.id.ImageSelect);
+        mSelectButton = (ImageButton)findViewById(R.id.ImageSelect);
         mPostTitle = (EditText)findViewById(R.id.TitleField);
         mPostDesc =  (EditText)findViewById(R.id.DescField);
         mSubmitPost =  (Button)findViewById(R.id.SubmitBtn);
+
+
         mProgress = new ProgressDialog(this);
 
 
@@ -97,10 +100,10 @@ public class PostActivity extends AppCompatActivity {
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                     Uri downloaduri = taskSnapshot.getDownloadUrl();
-                    /*DatabaseReference newPost = mDatabase.push();
+                    DatabaseReference newPost = mDatabase.push();
                     newPost.child("title").setValue(title_val);
                     newPost.child("desc").setValue(desc_val);
-                    newPost.child("image").setValue(downloaduri.toString());*/
+                    newPost.child("image").setValue(downloaduri.toString());
 
 
                     mProgress.dismiss();
