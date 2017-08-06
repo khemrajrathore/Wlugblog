@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -81,32 +82,32 @@ public class PostActivity extends AppCompatActivity {
         final String title_val = mPostTitle.getText().toString().trim();
         final String desc_val = mPostDesc.getText().toString().trim();
 
-        if(!TextUtils.isEmpty(title_val)&&!TextUtils.isEmpty(desc_val))
+        if(!TextUtils.isEmpty(title_val)&&!TextUtils.isEmpty(desc_val)&&mImageUri!=null)
         {
-            DatabaseReference newPost = mDatabase.push();
-            newPost.child("title").setValue(title_val);
-            newPost.child("desc").setValue(desc_val);
-            mProgress.dismiss();
+            //DatabaseReference newPost = mDatabase.push();
+            //newPost.child("title").setValue(title_val);
+            //newPost.child("desc").setValue(desc_val);
+            //mProgress.dismiss();
             //Toast.makeText(this,"Title : "+title_val,Toast.LENGTH_LONG).show();
-            finish();
 
-            /*StorageReference filepath = mStorage.child("Blog_Images").child(mImageUri.getLastPathSegment());
+            StorageReference filepath = mStorage.child("Blog_Images").child(mImageUri.getLastPathSegment());
+            //Log.d("Storage",mImageUri.toString());
             filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                     Uri downloaduri = taskSnapshot.getDownloadUrl();
-                    DatabaseReference newPost = mDatabase.push();
+                    /*DatabaseReference newPost = mDatabase.push();
                     newPost.child("title").setValue(title_val);
                     newPost.child("desc").setValue(desc_val);
-                    newPost.child("image").setValue(downloaduri.toString());
+                    newPost.child("image").setValue(downloaduri.toString());*/
 
 
                     mProgress.dismiss();
                     finish();
 
                 }
-            });*/
+            });
 
 
 
